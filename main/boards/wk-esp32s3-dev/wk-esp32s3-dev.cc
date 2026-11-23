@@ -1,4 +1,4 @@
-#include "troko_tools.h"
+#include "atomix_tools.h"
 #include "wifi_board.h"
 #include "codecs/no_audio_codec.h"
 #include "display/lcd_display.h"
@@ -264,8 +264,8 @@ private:
     // 物联网初始化，添加对 AI 可见设备
     void InitializeTools() {
         static LampController lamp(LAMP_GPIO);
-	static TrokoTools troko_tools(GetDisplay());
-	troko_tools.Register();
+	static AtomixTools atomix_tools(GetDisplay());
+	atomix_tools.Register();
     }
 
 public:
